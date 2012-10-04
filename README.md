@@ -17,6 +17,7 @@ deploy
 1. ```git clone``` this repo
 1. ```heroku create``` to create an appserver.
 1. ```git push heroku master``` to push this code up to heroku.
+1. ```heroku config:add NODE_ENV=production```
 1. ```heroku ps:scale web=1``` to start the server.
 1. ```http://yourapp.herokuapp.com/upload.html``` u: nixon p: @#$jfiehd1
 
