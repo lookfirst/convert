@@ -10,7 +10,7 @@ app = express()
 auth = express.basicAuth (u,p) ->
 	u == 'nixon' && p == '@#$jfiehd1'
 
-app.get '/', (req, res) ->
+app.get '/', auth, (req, res) ->
 	res.redirect('/upload.html')
 
 app.post '/', auth, (req, res) ->
