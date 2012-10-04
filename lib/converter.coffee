@@ -2,12 +2,16 @@ exec = require('child_process').exec
 
 execSettings = {encoding: 'binary', maxBuffer: 100000*1024}
 
-defaultConvert = 'pdf:jpg'
+defaultConvert = 'pdf:png'
 
 convertSettings =
 	'pdf:jpg':
 		'input': 'pdf'
 		'output': 'jpg'
+		'args': '-density 600 -colorspace RGB'
+	'pdf:png':
+		'input': 'pdf'
+		'output': 'png'
 		'args': '-density 600 -colorspace RGB'
 
 
