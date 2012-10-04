@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>Upload</title>
+</head>
+<body>
+
+<p>
+Upload a file to convert
+</p>
+
+<form action="/" method="POST" enctype="multipart/form-data">
+	<input type="file" name="upload" /><br />
+	<input type="text" name="convert" placeholder="pdf:jpg" value="pdf:jpg" />  (required) <br />
+	<input type="text" name="input" placeholder="pdf" /> (input format)<br />
+	<input type="text" name="output" placeholder="jpg" /> (output format)<br />
+	<input type="text" name="args" placeholder="-density 600 -colorspace RGB" size="100" /><br />
+	<input type="submit" />
+</form>
+
+</body>
+
+</html>
