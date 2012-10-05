@@ -1,7 +1,7 @@
 convert
 =======
 
-alternative for the [appengine conversion api](https://developers.google.com/appengine/docs/java/conversion/) that has been decommissioned as of November 2012
+alternative for the [appengine conversion api](https://developers.google.com/appengine/docs/java/conversion/) which was decommissioned November 2012
 
 integrates binaries for Ghostscript / ImageMagick with a thin NodeJS web wrapper with easy deployment on Heroku
 
