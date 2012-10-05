@@ -3,13 +3,18 @@ convert
 
 alternative for the [appengine conversion api](https://developers.google.com/appengine/docs/java/conversion/) which was decommissioned November 2012
 
-integrates binaries for Ghostscript / ImageMagick with a thin NodeJS web wrapper with easy deployment on Heroku
+provides a webservice to convert pdf -> image & image -> image
+
+integrates [Ghostscript](http://ghostscript.com/) & [ImageMagick](http://www.imagemagick.org/) with a thin NodeJS web wrapper with easy deployment on Heroku (free!)
+
+released under a Apache 2.0 style license
+
+usage
+-----
 
 simply ```method=POST enctype=multipart/form-data``` an uploaded file to the server, with [some arguments](https://github.com/lookfirst/convert/blob/master/public/upload.html), and it'll return the result
 
-[AppEngineJava](https://github.com/lookfirst/convert/wiki/AppEngineJava) for an example Java client
-
-released under a Apache 2.0 style license
+view [AppEngine Java](https://github.com/lookfirst/convert/wiki/AppEngineJava) for an example Java client that saves output to the blobstore
 
 deploy
 ------
@@ -33,4 +38,4 @@ develop
 1. ```foreman start``` to start the server
 1. ```http://localhost:5000/``` u: nixon p: @#$jfiehd1
 
-> [documentation](https://github.com/lookfirst/convert/wiki/Compile) on how Ghostscript/ImageMagick has been compiled on Heroku. binaries are in the ```/vendor``` directory.
+> [documentation](https://github.com/lookfirst/convert/wiki/Compile) on how Ghostscript/ImageMagick has been compiled on Heroku with binaries stored in the ```/vendor``` directory.
