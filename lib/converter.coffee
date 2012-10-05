@@ -13,6 +13,10 @@ convertSettings =
 		'input': 'pdf'
 		'output': 'png'
 		'args': '-density 600'
+	'pdf:png-thumb':
+		'input': 'pdf'
+		'output': 'png'
+		'args': '-depth 4 -resize 173 -quality 80 -strip'
 
 
 getConvertSettings = (req) ->
