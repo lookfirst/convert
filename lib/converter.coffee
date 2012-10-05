@@ -20,11 +20,12 @@ convertSettings =
 
 
 getConvertSettings = (req) ->
-	if req.body.convert
-		res = convertSettings[req.body.convert]
-		res.input = req.body.input if req.body.input
-		res.output = req.body.output if req.body.output
-		res.args = req.body.args if req.body.args
+	b = req.body
+	if b.convert
+		res = convertSettings[b.convert]
+		res.input = b.input if b.input
+		res.output = b.output if b.output
+		res.args = b.args if b.args
 		return res
 	else
 		convertSettings[defaultConvert]
