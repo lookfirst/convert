@@ -5,9 +5,7 @@ replacement for the [appengine conversion api](https://developers.google.com/app
 
 integrates binaries for Ghostscript / ImageMagick with a thin NodeJS web wrapper with easy deployment on Heroku
 
-simply ```POST/enctype=multipart/form-data``` an uploaded file to the server, with some arguments, and it'll return the result directly
-
-[upload.html](https://github.com/lookfirst/convert/blob/master/public/upload.html) for the arguments
+simply ```method=POST enctype=multipart/form-data``` an uploaded file to the server, with [some arguments](https://github.com/lookfirst/convert/blob/master/public/upload.html), and it'll return the result
 
 [AppEngineJava](https://githubt.com/lookfirst/convert/wiki/AppEngineJava) for an example Java client
 
