@@ -8,11 +8,11 @@ convertSettings =
 	'pdf:jpg':
 		'input': 'pdf'
 		'output': 'jpg'
-		'args': '-density 600 -colorspace RGB'
+		'args': '-density 600'
 	'pdf:png':
 		'input': 'pdf'
 		'output': 'png'
-		'args': '-density 600 -colorspace RGB'
+		'args': '-density 600'
 
 
 getConvertSettings = (req) ->
