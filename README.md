@@ -7,7 +7,7 @@ integrates binaries for Ghostscript / ImageMagick with a thin NodeJS web wrapper
 
 simply ```method=POST enctype=multipart/form-data``` an uploaded file to the server, with [some arguments](https://github.com/lookfirst/convert/blob/master/public/upload.html), and it'll return the result
 
-[AppEngineJava](https://githubt.com/lookfirst/convert/wiki/AppEngineJava) for an example Java client
+[AppEngineJava](https://github.com/lookfirst/convert/wiki/AppEngineJava) for an example Java client
 
 released under a Apache 2.0 style license.
 
