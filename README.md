@@ -9,7 +9,7 @@ simply ```method=POST enctype=multipart/form-data``` an uploaded file to the ser
 
 [AppEngineJava](https://github.com/lookfirst/convert/wiki/AppEngineJava) for an example Java client
 
-released under a Apache 2.0 style license.
+released under a Apache 2.0 style license
 
 deploy
 ------
