@@ -29,6 +29,7 @@ develop
 1. see above for setting up the toolbelt and cloning this repo.
 1. ```sudo npm install -g nodemon``` to install nodemon globally
 1. ```npm install``` to install the rest of the node dependencies locally
+1. ```brew install ghostscript``` && ```brew install imagemagick``` - you will need to install [brew](http://mxcl.github.com/homebrew/) first
 1. ```foreman start``` to start the server
 1. ```http://localhost:5000/``` u: nixon p: @#$jfiehd1
 
