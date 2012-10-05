@@ -2,7 +2,6 @@
 
 ROOT=$(dirname $(dirname $0))
 PATH="node_modules/.bin:/app/vendor/convert/bin:$PATH"
-export $PATH
 
 if [ ! -d vendor/convert ]; then
 	echo "Extracting vendor/convert..."
