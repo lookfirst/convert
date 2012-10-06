@@ -38,4 +38,4 @@ develop
 1. ```foreman start``` to start the server
 1. ```http://localhost:5000/``` u: nixon p: @#$jfiehd1
 
-> [documentation](https://github.com/lookfirst/convert/wiki/Compile) on how Ghostscript/ImageMagick has been compiled on Heroku with binaries stored in the ```/vendor``` directory.
+> [documentation](https://github.com/lookfirst/convert/wiki/Compile) on how Ghostscript/ImageMagick has been compiled on Heroku with binaries stored in the [```/vendor```](https://github.com/lookfirst/convert/tree/master/vendor) directory.
