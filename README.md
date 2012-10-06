@@ -3,7 +3,7 @@ convert
 
 alternative for the [appengine conversion api](https://developers.google.com/appengine/docs/java/conversion/) which was decommissioned November 2012
 
-provides a webservice to convert pdf -> image & image -> image
+provides a webservice to [convert](http://www.imagemagick.org/script/convert.php) pdf -> image & image -> image
 
 integrates [Ghostscript](http://ghostscript.com/) & [ImageMagick](http://www.imagemagick.org/) with a thin NodeJS web wrapper with easy deployment on Heroku (free!)
 
