@@ -12,6 +12,8 @@ released under a Apache 2.0 style license
 usage
 -----
 
+![screenshot](https://raw.github.com/lookfirst/convert/master/public/upload.jpg)
+
 simply ```method=POST enctype=multipart/form-data``` an uploaded file to the server, with [some arguments](https://github.com/lookfirst/convert/blob/master/public/upload.html), and it'll return the result
 
 view [AppEngine Java](https://github.com/lookfirst/convert/wiki/AppEngineJava) for an example Java client that saves output to the [blobstore](https://developers.google.com/appengine/docs/java/blobstore/overview)
