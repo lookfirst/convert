@@ -1,21 +1,69 @@
-<html>
-<head>
-	<title>Upload</title>
-</head>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Upload</title>
+		<link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet" />
+	</head>
 <body>
 
-<p>
-Upload a file to convert
-</p>
+<div class="navbar navbar-inverse navbar-static-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="/upload.html">Convert</a>
+    </div>
+  </div>
+</div>
 
-<form action="/" method="POST" enctype="multipart/form-data">
-	<input type="file" name="upload" /><br />
-	<input type="text" name="convert" placeholder="pdf:png" value="pdf:png" />  (required) <br />
-	<input type="text" name="input" placeholder="pdf" /> (input format)<br />
-	<input type="text" name="output" placeholder="png" /> (output format)<br />
-	<input type="text" name="args" placeholder="-density 600" size="100" /><br />
-	<input type="submit" />
-</form>
+<div class="container">
+	<div class="row1">
+		<div class="span10">
+			<form action="/" method="POST" enctype="multipart/form-data" class="form-horizontal">
+				<legend>Upload a file to convert</legend>
+
+				<p>
+					The <code>Named Setting</code> is defined in <a href="https://github.com/lookfirst/convert/blob/master/lib/converter.coffee" target="_blank">converter.coffee</a>
+					and defaults to pdf:png. Override any named setting with optional arguments.
+				</p>
+
+				<div class="control-group">
+					<label class="control-label" for="upload">File</label>
+					<div class="controls">
+						<input type="file" name="upload" />
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="convert">Named Setting</label>
+					<div class="controls">
+						<input type="text" name="convert" placeholder="pdf:png" value="pdf:png" />  (required)
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="input">Input</label>
+					<div class="controls">
+						<input type="text" name="input" placeholder="pdf" />
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="output">Output</label>
+					<div class="controls">
+						<input type="text" name="output" placeholder="png" />
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="args">Arguments</label>
+					<div class="controls">
+						<input type="text" name="args" placeholder="-density 600" size="100" class="input-xxlarge" />
+					</div>
+				</div>
+				<div class="control-group">
+					<div class="controls">
+						<input type="submit" value="Submit" class="btn btn-primary" />
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
 
 </body>
 
