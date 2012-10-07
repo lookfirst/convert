@@ -31,7 +31,7 @@ getConvertSettings = (req) ->
 		convertSettings[defaultConvert]
 
 
-module.exports.convert = (req, res) ->
+exports.convert = (req, res) ->
 	upload = req.files.upload
 
 	settings = getConvertSettings(req)
