@@ -1,19 +1,29 @@
 express = require('express')
+multer  = require('multer')
+morgan = require('morgan')
+bodyParser = require('body-parser')
+favicon = require('serve-favicon')
+serveStatic = require('serve-static')
+auth = require('http-auth')
+
 converter = require('./lib/converter')
 
+basic = auth.basic({realm: "Convert"}, (u, p, cb) ->
+	cb(u == 'nixon' && p == '@#$jfiehd1')
+)
+
 app = express()
-	.use(express.logger())
-	.use(express.favicon())
-	.use(express.bodyParser())
-	.use(express.static(__dirname + '/public'))
+	.use(morgan('combined'))
+	.use(favicon(__dirname + '/public/favicon.ico'))
+	.use(bodyParser.urlencoded({ extended: false }))
+	.use(bodyParser.json())
+	.use(multer())
+	.use(serveStatic(__dirname + '/public'))
 
-auth = express.basicAuth (u,p) ->
-	u == 'nixon' && p == '@#$jfiehd1'
-
-app.get '/', auth, (req, res) ->
+app.get '/', auth.connect(basic), (req, res) ->
 	res.redirect('/upload.html')
 
-app.post '/', auth, (req, res) ->
+app.post '/', auth.connect(basic), (req, res) ->
 	converter.convert(req, res)
 
 

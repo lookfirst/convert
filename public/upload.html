@@ -2,21 +2,23 @@
 <html lang="en">
 	<head>
 		<title>Upload</title>
-		<link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css" />
 	</head>
 <body>
 
-<div class="navbar navbar-inverse navbar-static-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="brand" href="/upload.html">Convert</a>
+<nav class="navbar navbar-default navbar-inverse navbar-static-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/upload.html">Convert</a>
     </div>
   </div>
-</div>
+</nav>
 
 <div class="container">
-	<div class="row1">
-		<div class="span10">
+	<div class="row">
+		<div class="col-md-10">
 			<form action="/" method="POST" enctype="multipart/form-data" class="form-horizontal">
 				<legend>Upload a file to convert</legend>
 
@@ -25,38 +27,39 @@
 					and defaults to pdf:png. Override any named setting with optional arguments.
 				</p>
 
-				<div class="control-group">
-					<label class="control-label" for="upload">File</label>
-					<div class="controls">
-						<input type="file" name="upload" />
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="upload">File</label>
+					<div class="col-sm-10">
+						<input type="file" id="upload" name="upload" class="form-control" />
 					</div>
 				</div>
-				<div class="control-group">
-					<label class="control-label" for="convert">Named Setting</label>
-					<div class="controls">
-						<input type="text" name="convert" placeholder="pdf:png" value="pdf:png" />  (required)
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="convert">Named Setting</label>
+					<div class="col-sm-10">
+						<input type="text" id="convert" name="convert" placeholder="pdf:png" value="pdf:png" class="form-control" />
+						<p class="help-block">(required)</p>
 					</div>
 				</div>
-				<div class="control-group">
-					<label class="control-label" for="input">Input</label>
-					<div class="controls">
-						<input type="text" name="input" placeholder="pdf" />
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="input">Input</label>
+					<div class="col-sm-10">
+						<input type="text" id="input" name="input" placeholder="pdf" class="form-control" />
 					</div>
 				</div>
-				<div class="control-group">
-					<label class="control-label" for="output">Output</label>
-					<div class="controls">
-						<input type="text" name="output" placeholder="png" />
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="output">Output</label>
+					<div class="col-sm-10">
+						<input type="text" id="output" name="output" placeholder="png" class="form-control" />
 					</div>
 				</div>
-				<div class="control-group">
-					<label class="control-label" for="args">Arguments</label>
-					<div class="controls">
-						<input type="text" name="args" placeholder="-density 600" size="100" class="input-xxlarge" />
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="args">Arguments</label>
+					<div class="col-sm-10">
+						<input type="text" id="args" name="args" placeholder="-density 600" size="100" class="form-control" />
 					</div>
 				</div>
-				<div class="control-group">
-					<div class="controls">
+				<div class="form-group">
+					<div class="col-sm-10">
 						<input type="submit" value="Upload" class="btn btn-primary" />
 					</div>
 				</div>
