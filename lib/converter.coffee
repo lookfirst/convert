@@ -34,7 +34,7 @@ getConvertSettings = (req) ->
 exports.convert = (req, res) ->
 	upload = req.files.upload
 
-	console.log(req.files.upload)
+	console.log(upload)
 
 	settings = getConvertSettings(req)
 

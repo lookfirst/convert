@@ -12,16 +12,12 @@ basic = auth.basic({realm: "Convert"}, (u, p, cb) ->
 	cb(u == 'nixon' && p == '@#$jfiehd1')
 )
 
-multerConfig = {}
-#if process.env.NODE_ENV == 'production'
-#	multerConfig = {dest: '/var/tmp'}
-
 app = express()
 	.use(morgan('combined'))
 	.use(favicon(__dirname + '/public/favicon.ico'))
 	.use(bodyParser.json())
 	.use(bodyParser.urlencoded({ extended: true }))
-	.use(multer(multerConfig))
+	.use(multer())
 	.use(serveStatic(__dirname + '/public'))
 
 app.get '/', auth.connect(basic), (req, res) ->
