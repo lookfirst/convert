@@ -19,9 +19,9 @@ if process.env.NODE_ENV == 'production'
 app = express()
 	.use(morgan('combined'))
 	.use(favicon(__dirname + '/public/favicon.ico'))
-	.use(multer(multerConfig))
 	.use(bodyParser.json())
-	.use(bodyParser.urlencoded({ extended: false }))
+	.use(bodyParser.urlencoded({ extended: true }))
+	.use(multer(multerConfig))
 	.use(serveStatic(__dirname + '/public'))
 
 app.get '/', auth.connect(basic), (req, res) ->
