@@ -43,5 +43,8 @@ exports.convert = (req, res) ->
 	cmd = "convert #{settings.input}:#{upload.path} #{settings.args} #{settings.output}:-"
 
 	exec(cmd, execSettings, (error, stdout, stderr) ->
-		res.send(new Buffer(stdout, 'binary'))
+		if error
+			res.send(error)
+		else
+			res.send(new Buffer(stdout, 'binary'))
 	)
