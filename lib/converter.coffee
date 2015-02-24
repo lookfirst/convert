@@ -34,13 +34,13 @@ getConvertSettings = (req) ->
 exports.convert = (req, res) ->
 	upload = req.files.upload
 
-	console.log(req.files)
+	console.log(req.files.upload)
 
 	settings = getConvertSettings(req)
 
 	res.type(settings.output)
 
-	cmd = "convert #{settings.input}:#{upload.path}[0] #{settings.args} #{settings.output}:-"
+	cmd = "convert #{settings.input}:#{upload.path} #{settings.args} #{settings.output}:-"
 
 	exec(cmd, execSettings, (error, stdout, stderr) ->
 		res.send(new Buffer(stdout, 'binary'))
