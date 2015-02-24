@@ -13,8 +13,8 @@ basic = auth.basic({realm: "Convert"}, (u, p, cb) ->
 )
 
 multerConfig = {}
-if process.env.NODE_ENV == 'production'
-	multerConfig = {dest: '/var/tmp'}
+#if process.env.NODE_ENV == 'production'
+#	multerConfig = {dest: '/var/tmp'}
 
 app = express()
 	.use(morgan('combined'))
