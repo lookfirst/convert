@@ -5,7 +5,6 @@ bodyParser = require('body-parser')
 favicon = require('serve-favicon')
 serveStatic = require('serve-static')
 auth = require('http-auth')
-mkdirp = require('mkdirp')
 
 converter = require('./lib/converter')
 
@@ -15,9 +14,7 @@ basic = auth.basic({realm: "Convert"}, (u, p, cb) ->
 
 multerConfig = {}
 if process.env.NODE_ENV == 'production'
-	uploads = './uploads'
-	mkdirp(uploads)
-	multerConfig = {dest: uploads}
+	multerConfig = {dest: '/var/tmp'}
 
 app = express()
 	.use(morgan('combined'))
