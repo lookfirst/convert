@@ -1,5 +1,4 @@
 express = require('express')
-formidable = require('formidable')
 morgan = require('morgan')
 favicon = require('serve-favicon')
 serveStatic = require('serve-static')
