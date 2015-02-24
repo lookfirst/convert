@@ -1,14 +1,7 @@
 #!/bin/bash
 
 ROOT=$(dirname $(dirname $0))
-PATH="node_modules/.bin:/app/vendor/convert/bin:$PATH"
-
-if [ ! -d vendor/convert ]; then
-	echo "Extracting vendor/convert..."
-	cd vendor
-	tar -xjf convert.tar.bz2
-	cd ..
-fi
+PATH="node_modules/.bin:$PATH"
 
 if [ "${NODE_ENV}" == "production" ]; then
 	exec coffee web.coffee
