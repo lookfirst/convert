@@ -4,6 +4,7 @@ favicon = require('serve-favicon')
 serveStatic = require('serve-static')
 auth = require('http-auth')
 bodyParser = require('body-parser')
+multer = require('multer')
 
 converter = require('./lib/converter')
 
