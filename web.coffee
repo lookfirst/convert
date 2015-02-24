@@ -1,10 +1,10 @@
 express = require('express')
-multer  = require('multer')
+formidable = require('formidable')
 morgan = require('morgan')
-bodyParser = require('body-parser')
 favicon = require('serve-favicon')
 serveStatic = require('serve-static')
 auth = require('http-auth')
+bodyParser = require('body-parser')
 
 converter = require('./lib/converter')
 
@@ -19,9 +19,9 @@ if process.env.NODE_ENV == 'production'
 app = express()
 	.use(morgan('combined'))
 	.use(favicon(__dirname + '/public/favicon.ico'))
-#	.use(bodyParser.urlencoded({ extended: false }))
-#	.use(bodyParser.json())
 	.use(multer(multerConfig))
+	.use(bodyParser.json())
+	.use(bodyParser.urlencoded({ extended: false }))
 	.use(serveStatic(__dirname + '/public'))
 
 app.get '/', auth.connect(basic), (req, res) ->
